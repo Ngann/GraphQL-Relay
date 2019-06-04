@@ -34,7 +34,7 @@ const compiler = webpack({
 
 const app = new WebPackDevServer(compiler, {
     contentBase: '/public/',
-    proxy: {'/graphql': `http://localshot:${APP_PORT}`},
+    proxy: {'/graphql': `http://localhost:${GRAPHQL_PORT}`},
     publicPath: '/src/',
     stats: {colors: true},
 });
